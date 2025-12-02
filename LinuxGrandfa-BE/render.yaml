@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: linuxgrandfa-api
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false  # Set this manually in Render dashboard
+      - key: GEMINI_MODEL
+        value: gemini-2.5-flash
+      - key: CORS_ORIGINS
+        sync: false  # Set this to your Vercel frontend URL
+      - key: DEBUG
+        value: false
