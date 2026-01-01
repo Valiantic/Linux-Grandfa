@@ -28,6 +28,10 @@ body {
   font-family: var(--font-terminal), monospace;
 }
 
+.font-mono {
+  font-family: var(--font-mono), monospace;
+}
+
 /* Custom scrollbar for pixel theme */
 ::-webkit-scrollbar {
   width: 12px;

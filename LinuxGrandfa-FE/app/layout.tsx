@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Press_Start_2P, VT323 } from "next/font/google";
+import { Press_Start_2P, VT323, Space_Mono } from "next/font/google";
 import "./globals.css";
 
 const pressStart = Press_Start_2P({
@@ -11,6 +11,12 @@ const pressStart = Press_Start_2P({
 const vt323 = VT323({
   weight: "400",
   variable: "--font-terminal",
+  subsets: ["latin"],
+});
+
+const spaceMono = Space_Mono({
+  weight: ["400", "700"],
+  variable: "--font-mono",
   subsets: ["latin"],
 });
 
@@ -30,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${pressStart.variable} ${vt323.variable} antialiased`}
+        className={`${pressStart.variable} ${vt323.variable} ${spaceMono.variable} antialiased`}
       >
         {children}
       </body>

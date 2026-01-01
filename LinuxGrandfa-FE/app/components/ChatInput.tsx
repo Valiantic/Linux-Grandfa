@@ -113,7 +113,7 @@ export default function ChatInput({
               <button
                 type="button"
                 onClick={() => removeImage(index)}
-                className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 border border-black text-white font-pixel text-xs flex items-center justify-center hover:bg-red-400 transition-colors"
+                className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 border border-black text-white font-mono text-xs flex items-center justify-center hover:bg-red-400 transition-colors"
               >
                 ×
               </button>
@@ -132,7 +132,7 @@ export default function ChatInput({
           onChange={handleImageSelect}
           style={{ display: 'none' }}
         />
-        
+
         {/* Upload Button */}
         <button
           type="button"
@@ -140,7 +140,7 @@ export default function ChatInput({
           disabled={disabled}
           className={`
             bg-zinc-800 border-4 border-zinc-600 
-            text-green-400 font-pixel text-lg
+            text-green-400 font-mono text-lg
             px-4 py-4
             hover:bg-zinc-700 hover:border-green-500
             shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]
@@ -157,7 +157,7 @@ export default function ChatInput({
 
         <div className="relative flex-1">
           {/* Terminal prompt indicator */}
-          <span className="absolute left-4 top-1/2 -translate-y-1/2 text-green-500 font-pixel text-sm pointer-events-none z-10">
+          <span className="absolute left-4 top-1/2 -translate-y-1/2 text-green-500 font-mono text-sm pointer-events-none z-10">
             {"$>"}
           </span>
           <input
@@ -169,7 +169,7 @@ export default function ChatInput({
             disabled={disabled}
             className={`
               w-full bg-black border-4 border-zinc-700 
-              text-green-400 font-pixel text-sm
+              text-green-400 font-mono text-sm
               pl-12 pr-4 py-4
               placeholder:text-zinc-600
               focus:outline-none focus:border-green-500

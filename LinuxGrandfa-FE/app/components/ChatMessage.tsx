@@ -28,8 +28,8 @@ export default function ChatMessage({ message, isUser, timestamp, images }: Chat
         className={`
           relative max-w-[80%] px-4 py-3
           ${isUser
-            ? "font-pixel text-lg bg-green-500 text-black border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
-            : "font-terminal text-2xl font-semibold bg-zinc-800 text-green-400 border-2 border-green-500 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
+            ? "font-mono text-lg font-bold bg-green-500 text-black border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
+            : "font-mono text-2xl font-semibold bg-zinc-800 text-green-400 border-2 border-green-500 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
           }
         `}
       >
