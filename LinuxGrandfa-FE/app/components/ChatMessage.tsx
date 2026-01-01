@@ -26,21 +26,19 @@ export default function ChatMessage({ message, isUser, timestamp, images }: Chat
     <div className={`flex ${isUser ? "justify-end" : "justify-start"} mb-4 group`}>
       <div
         className={`
-          relative max-w-[80%] px-4 py-3 font-pixel text-sm
-          ${
-            isUser
-              ? "bg-green-500 text-black border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
-              : "bg-zinc-800 text-green-400 border-2 border-green-500/50 shadow-[4px_4px_0px_0px_rgba(34,197,94,0.3)]"
+          relative max-w-[80%] px-4 py-3
+          ${isUser
+            ? "font-pixel text-lg bg-green-500 text-black border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
+            : "font-terminal text-2xl font-semibold bg-zinc-800 text-green-400 border-2 border-green-500 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
           }
         `}
       >
         {/* Pixel corner accent */}
         <div
-          className={`absolute -top-1 ${isUser ? "-left-1" : "-right-1"} w-2 h-2 ${
-            isUser ? "bg-black" : "bg-green-500"
-          }`}
+          className={`absolute -top-1 ${isUser ? "-left-1" : "-right-1"} w-2 h-2 ${isUser ? "bg-black" : "bg-green-500"
+            }`}
         />
-        
+
         {/* Avatar indicator */}
         <div className={`absolute -top-2 ${isUser ? "right-2" : "left-2"} text-xs`}>
           {isUser ? "👤" : "🐧"}
@@ -53,8 +51,8 @@ export default function ChatMessage({ message, isUser, timestamp, images }: Chat
             className={`
               absolute top-2 right-2 p-1 text-xs
               opacity-0 group-hover:opacity-100 transition-opacity duration-200
-              ${isUser 
-                ? "text-black/60 hover:text-black" 
+              ${isUser
+                ? "text-black/60 hover:text-black"
                 : "text-green-400/60 hover:text-green-400"
               }
             `}
@@ -83,7 +81,7 @@ export default function ChatMessage({ message, isUser, timestamp, images }: Chat
         )}
 
         {message && <p className="leading-relaxed pr-6">{message}</p>}
-        
+
         {timestamp && (
           <span className={`block mt-2 text-xs opacity-60 ${isUser ? "text-black" : "text-green-300"}`}>
             {timestamp}
