@@ -21,8 +21,36 @@ const spaceMono = Space_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Linux Grandfa",
-  description: "Your Linux command line grandpa",
+  metadataBase: new URL("https://linux-grandfa.vercel.app"),
+  title: "Linux Grandfa | AI Linux Command Line Mentor",
+  description:
+    "Ask Linux Grandfa for practical Linux commands, system administration guidance, DevOps advice, and terminal screenshot analysis.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Linux Grandfa | AI Linux Command Line Mentor",
+    description:
+      "Get friendly, practical guidance for Linux commands, system administration, DevOps, and terminal troubleshooting.",
+    url: "https://linux-grandfa.vercel.app/",
+    siteName: "Linux Grandfa",
+    type: "website",
+    images: [
+      {
+        url: "/logo.png",
+        width: 512,
+        height: 512,
+        alt: "Linux Grandfa pixel art logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary",
+    title: "Linux Grandfa | AI Linux Command Line Mentor",
+    description:
+      "Practical Linux commands, administration guidance, DevOps advice, and terminal screenshot analysis.",
+    images: ["/logo.png"],
+  },
   icons: {
     icon: "/logo.png",
   },
